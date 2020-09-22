@@ -1,0 +1,23 @@
+{
+  "name": "anusha_learnings",
+  "version": "1.0.0",
+  "description": "single page app",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anushasegu/anusha_learnings.git"
+  },
+  "author": "anusha segu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anushasegu/anusha_learnings/issues"
+  },
+  "homepage": "https://github.com/anushasegu/anusha_learnings#readme",
+  "devDependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -90,18 +90,25 @@
         ]
         var id;
 
+        var listed_item;
+
         function search() {
             var item_val = document.getElementById('input_item').value;
             item_list.forEach(function(entry) {
                 if(entry.name == item_val) {
+                    listed_item = true;
                     alert('Cost of the searched item: '+ entry.cost)
-                } else {
-                    alert('item searched is not available')
+                }
+                if(entry.name != item_val) {
+                    listed_item = false;
                 }
             })
+            if(listed_item == false) {
+                alert('item searched is not available')
+            }
         }
         var sort_items =[];
-        var cost_arr=[];var new_arr = [];
+        var cost_arr=[];
         var item = {};
 
         function filter() {
@@ -109,12 +116,16 @@
                 cost_arr.push(entry.cost);
             })
             cost_arr = cost_arr.sort();
-            
-            for(const[key, val] of Object.entries(cost_arr)) {
+
+            for (var i of cost_arr) {
                 item_list.forEach(function(element) {
-                    
+                    if(i == element.cost) {
+                        sort_items.push(element.name)
+                    }  
                 })  
             }
+            alert('Items sorted by price from range low to high- '+ sort_items) 
+           
         }
             
         
